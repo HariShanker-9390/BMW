@@ -6,6 +6,8 @@
     text-align: center;
     margin:auto;
     padding:10px;
+    background-color: skyblue;
+    box-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .card img{
     width:100%;
@@ -22,4 +24,39 @@
 
 .card button:hover{
      color:blue;
+}
+
+.navbar{
+    width:100px;
+    border:2px solid black;
+    text-align: center;
+    padding: 15px;
+    background-color:aliceblue;
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding:20px ;
+}
+
+.navbar a{
+    padding: 15px;
+    text-decoration:none;
+    margin-bottom: 10px;
+}
+
+.navbar a:hover{
+    color:brown;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+#menu-btn{
+    font-size: 30px;
+    border:none;
+    background: none;
+    cursor: pointer;
 }
