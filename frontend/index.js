@@ -50,15 +50,27 @@ function randomUser(){
             })
 }
 
-let menuBtn=document.getElementById("menu-btn");
-let navbar=document.getElementById("navbar");
-menuBtn.addEventListener("click",
-    function(){
-        if(navbar.style.display==="flex"){
-            navbar.style.display="none";
-        }
-        else{
-            navbar.style.display="flex";
-        }
-    }
-)
+function myRandomUser(){
+    fetch("/api/random-user")
+         .then(function(res){
+            return res.json();
+         })
+         .then(function(data){
+            var username= document.getElementById("user-name");
+            var userimage= document.getElementById("user-image");
+            var usergender= document.getElementById("user-gender"); 
+            var newUserName=data.name;  
+            var newUserGender=data.gender;
+            var newUserImage=data.image;
+
+            username.innerHTML=newUserName;
+            usergender.innerHTML=newUserGender;
+            userimage.src=newUserImage;
+
+         })
+
+            .catch(function(err){
+                console.log("Error occured:"+err);
+            })
+}
+
